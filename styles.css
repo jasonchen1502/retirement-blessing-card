@@ -54,8 +54,9 @@ textarea {
 .hero-image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  max-height: min(82vh, 980px);
+  object-fit: contain;
+  background: var(--paper-soft);
 }
 
 .seal {
@@ -402,8 +403,7 @@ h1 {
   }
 
   .hero-image {
-    aspect-ratio: 4 / 5;
-    object-position: center;
+    max-height: none;
   }
 
   .seal {
