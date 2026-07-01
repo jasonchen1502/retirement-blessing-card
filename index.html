@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>官長、主任退休祝福卡片</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card" aria-label="官長、主任退休祝福卡片">
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="assets/retirement-blessing-hero.png"
+            alt="退休祝福主視覺，桌上有紀念冊、鋼筆與茶杯，象徵同仁留下祝福"
+          >
+          <div class="seal">新北地院總務科</div>
+        </div>
+
+        <div class="card-copy">
+          <p class="kicker">給敬愛的官長、主任</p>
+          <h1>榮退誌喜，感謝一路照顧</h1>
+          <p class="lead">
+            謝謝您們多年來的帶領、提醒與照拂，讓每一段共事時光都成為珍貴回憶。願退休後的日子自在從容，日日平安，處處有新的風景。
+          </p>
+
+          <div class="gift-row" aria-label="退休祝福">
+            <article class="gift-note">
+              <span class="gift-icon book" aria-hidden="true"></span>
+              <div>
+                <h2>留下回憶</h2>
+                <p>把同仁想說的感謝與祝福，收進這本溫暖的紀念冊。</p>
+              </div>
+            </article>
+            <article class="gift-note">
+              <span class="gift-icon tea" aria-hidden="true"></span>
+              <div>
+                <h2>展開新程</h2>
+                <p>願往後的每一天都有好茶、好心情，也有剛剛好的悠閒。</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="signature">新北地院總務科全體同仁 敬賀</p>
+        </div>
+      </section>
+
+      <section class="blessing-board" aria-label="祝福留言">
+        <div class="board-header">
+          <div>
+            <p class="kicker">大家的祝福</p>
+            <h2>寫下想給官長、主任的一句話</h2>
+          </div>
+          <button class="ghost-button" id="copyLinkButton" type="button">複製分享連結</button>
+        </div>
+
+        <form class="message-form" id="messageForm">
+          <label>
+            <span>署名</span>
+            <input id="nameInput" name="name" maxlength="16" placeholder="例如：總務科同仁" autocomplete="name">
+          </label>
+          <label>
+            <span>祝福語</span>
+            <textarea id="messageInput" name="message" maxlength="110" rows="3" placeholder="寫下祝福..." required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="primary-button" type="submit">送出祝福</button>
+            <button class="ghost-button" id="exportButton" type="button">匯出祝福</button>
+            <label class="file-button">
+              匯入祝福
+              <input id="importInput" type="file" accept="application/json">
+            </label>
+          </div>
+        </form>
+
+        <div class="share-output" id="shareOutput" aria-live="polite"></div>
+        <div class="messages-grid" id="messagesGrid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
